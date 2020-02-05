@@ -10,12 +10,34 @@ void handleEvents()
 		{
 			case sf::Event::Resized:
 			{
-				iGameResolutionX = window.getSize().x;
-				iGameResolutionY = window.getSize().y;
+				iChangedResolutionX = window.getSize().x;
+				iChangedResolutionY = window.getSize().y;
+
+				if (iChangedResolutionX < 800)
+				{
+					iChangedResolutionX = 800;
+				}
+
+				if (iChangedResolutionY < 450)
+				{
+					iChangedResolutionY = 450;
+				}
+
+				iGameResolutionX = iChangedResolutionX;
+				iGameResolutionY = iChangedResolutionY;
+
+				window.setSize(sf::Vector2u(iChangedResolutionX, iChangedResolutionY));
 
 				recalculateVideoParameters();
+				defaultView = setLetterbox(defaultView, iChangedResolutionX, iChangedResolutionY);
+				window.setView(defaultView);
 
 				break;
+			}
+
+			case sf::Event::Closed:
+			{
+				window.close();
 			}
 		}
 	}

@@ -1,0 +1,10 @@
+0  - started
+
+1  - initialized (main menu not initialized)
+
+9  - back button pressed in the main menu
+10 - main menu (not clicked / standby)
+11 - main menu (new game pressed)
+12 - main menu (continue pressed)
+13 - main menu (options pressed)
+14 - main menu (exit pressed - exiting)

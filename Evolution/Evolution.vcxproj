@@ -20,7 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Coordination.cpp" />
+    <ClCompile Include="Drawing.cpp" />
     <ClCompile Include="Events.cpp" />
+    <ClCompile Include="GameStates.cpp" />
     <ClCompile Include="Globals.cpp" />
     <ClCompile Include="Hitboxes.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -34,6 +36,9 @@
     <ClInclude Include="Functions.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Includes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="GameStates.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

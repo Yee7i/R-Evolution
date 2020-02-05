@@ -18,5 +18,11 @@ ciScreenResolutionX,
 ciScreenResolutionY;
 
 extern int
+gameState,
 iGameResolutionX,
-iGameResolutionY;
+iGameResolutionY,
+iChangedResolutionX,
+iChangedResolutionY;
+
+extern sf::View 
+defaultView;
