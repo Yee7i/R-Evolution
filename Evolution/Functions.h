@@ -7,6 +7,10 @@
 void initializeGame();
 void processGame();
 
+// GameStates.cpp
+
+void handleGameStates();
+
 // Events.cpp
 
 void handleEvents();
@@ -33,4 +37,9 @@ bool mouseInRectangle(sf::RectangleShape rectangle, sf::Vector2i mouse);
 
 void initializeMainMenu();
 void handleMainMenu();
-int displayMainMenu();
+void drawMainMenu();
+void handleSettings();
+
+// Utilities.cpp
+
+std::filesystem::path getProgramPath();

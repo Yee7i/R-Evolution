@@ -19,6 +19,8 @@
 #include <Thor/Time.hpp>
 #include <Thor/Particles.hpp>
 
+#include <filesystem>
+
 #include "Classes.h"
 #include "Globals.h"
 #include "Functions.h"

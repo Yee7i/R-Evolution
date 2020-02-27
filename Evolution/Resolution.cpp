@@ -28,7 +28,7 @@ void recalculateVideoParameters()
 	dAspectRatio = (double)ciScreenResolutionX / (double)ciScreenResolutionY;
 	dResolutionScale = (double)ciScreenResolutionY / (double)iGameResolutionY;
 
-	std::cout << dAspectRatio << " " << dResolutionScale << std::endl;
+//	std::cout << dAspectRatio << " " << dResolutionScale << std::endl;
 }
 
 sf::View setLetterbox(sf::View view, unsigned int resizedResolutionX, unsigned int resizedResolutionY)

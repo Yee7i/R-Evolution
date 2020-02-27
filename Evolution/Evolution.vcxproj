@@ -30,6 +30,7 @@
     <ClCompile Include="Resolution.cpp" />
     <ClCompile Include="Sprites.cpp" />
     <ClCompile Include="Time.cpp" />
+    <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classes.h" />
@@ -39,6 +40,22 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="GameStates.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="textures\mainMenu\mmBackground.png" />
+    <Image Include="textures\mainMenu\mmBubble15.png" />
+    <Image Include="textures\mainMenu\mmBubble35.png" />
+    <Image Include="textures\mainMenu\mmBubble60.png" />
+    <Image Include="textures\mainMenu\mmContinue.png" />
+    <Image Include="textures\mainMenu\mmContinueBig.png" />
+    <Image Include="textures\mainMenu\mmCredits.png" />
+    <Image Include="textures\mainMenu\mmCreditsBig.png" />
+    <Image Include="textures\mainMenu\mmExit.png" />
+    <Image Include="textures\mainMenu\mmExitBig.png" />
+    <Image Include="textures\mainMenu\mmSettings.png" />
+    <Image Include="textures\mainMenu\mmSettingsBig.png" />
+    <Image Include="textures\mainMenu\mmStart.png" />
+    <Image Include="textures\mainMenu\mmStartBig.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -117,6 +134,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Shadow\Documents\C++\Thor\include;C:\Users\Shadow\Documents\C++\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,6 +168,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Shadow\Documents\C++\Thor\include;C:\Users\Shadow\Documents\C++\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

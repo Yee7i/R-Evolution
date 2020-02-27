@@ -1,43 +1,36 @@
 #include "Includes.h"
 
-sf::RectangleShape newGameButton(sf::Vector2f(100, 50));
-sf::RectangleShape continueButton(sf::Vector2f(100, 50));
-sf::RectangleShape optionsButton(sf::Vector2f(100, 50));
-sf::RectangleShape exitButton(sf::Vector2f(100, 50));
-
-sf::RectangleShape darkenBackground(sf::Vector2f(800, 450));
-
 void initializeMainMenu()
 {
+	newGameButton.setSize(sf::Vector2f(100, 50));
+	continueButton.setSize(sf::Vector2f(100, 50));
+	settingsButton.setSize(sf::Vector2f(100, 50));
+	exitButton.setSize(sf::Vector2f(100, 50));
+
 	newGameButton.setFillColor(sf::Color::Transparent);
 	continueButton.setFillColor(sf::Color::Transparent);
-	optionsButton.setFillColor(sf::Color::Transparent);
+	settingsButton.setFillColor(sf::Color::Transparent);
 	exitButton.setFillColor(sf::Color::Transparent);
-
-	newGameButton.setOutlineColor(sf::Color::Red);
-	continueButton.setOutlineColor(sf::Color::Blue);
-	optionsButton.setOutlineColor(sf::Color::Green);
-	exitButton.setOutlineColor(sf::Color::Yellow);
-
-	newGameButton.setOutlineThickness(2);
-	continueButton.setOutlineThickness(2);
-	optionsButton.setOutlineThickness(2);
-	exitButton.setOutlineThickness(2);
 
 	newGameButton.setPosition(50, 50);
 	continueButton.setPosition(50, 120);
-	optionsButton.setPosition(50, 190);
+	settingsButton.setPosition(50, 190);
 	exitButton.setPosition(50, 260);
 
+	darkenBackground.setSize(sf::Vector2f(800, 450));
 	darkenBackground.setFillColor(sf::Color(0, 0, 0, 120));
 	darkenBackground.setPosition(0, 0);
+
+
 
 	gameState = 10;
 }
 
 void handleMainMenu()
 {
-	switch (displayMainMenu())
+	drawMainMenu();
+
+	switch (mmState)
 	{
 		case 0:
 		{
@@ -45,64 +38,50 @@ void handleMainMenu()
 			{
 				gameState = 10;
 			}
+
+			break;
 		}
 
 		case 1:
 		{
 			gameState = 11;
+
+			break;
 		}
 
 		case 2:
 		{
 			gameState = 12;
+
+			break;
 		}
 
 		case 3:
 		{
 			gameState = 13;
+
+			break;
 		}
 
 		case 4:
 		{
 			gameState = 14;
-			window.close();
+
+			break;
 		}
 	}
 }
 
-int displayMainMenu()
+void handleSettings()
 {
-	sf::Event clicked;
+	drawMainMenu();
+	window.draw(darkenBackground);
 
-	while (window.pollEvent(clicked))
-	{
-		if (clicked.type = sf::Event::MouseButtonPressed)
-		{
-			if (mouseInRectangle(newGameButton, sf::Mouse::getPosition()))
-			{
-				std::cout << "1" << std::endl;
-				return 1;
-			}
+	sf::RectangleShape test(sf::Vector2f(100, 100));
+	test.setPosition(100, 100);
+	test.setOutlineColor(sf::Color::Red);
+	test.setOutlineThickness(3);
+	test.setFillColor(sf::Color::Transparent);
 
-			if (mouseInRectangle(continueButton, sf::Mouse::getPosition()))
-			{
-				std::cout << "2" << std::endl;
-				return 2;
-			}
-
-			if (mouseInRectangle(optionsButton, sf::Mouse::getPosition()))
-			{
-				std::cout << "3" << std::endl;
-				return 3;
-			}
-
-			if (mouseInRectangle(exitButton, sf::Mouse::getPosition()))
-			{
-				std::cout << "4" << std::endl;
-				return 4;
-			}
-		}
-	}
-
-	return 0;
+	window.draw(test);
 }

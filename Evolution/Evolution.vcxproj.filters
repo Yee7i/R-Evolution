@@ -48,6 +48,9 @@
     <ClCompile Include="GameStates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classes.h">
@@ -67,5 +70,49 @@
     <Text Include="GameStates.txt">
       <Filter>Resource Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="textures\mainMenu\mmBackground.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmBubble15.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmBubble35.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmBubble60.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmContinue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmContinueBig.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmCredits.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmCreditsBig.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmExit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmExitBig.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmSettings.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmSettingsBig.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmStart.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="textures\mainMenu\mmStartBig.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

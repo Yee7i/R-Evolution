@@ -22,4 +22,13 @@ void drawTest()
 
 	window.draw(test2);
 	window.draw(outline);
+
+}
+
+void drawMainMenu()
+{
+	window.draw(newGameButton);
+	window.draw(continueButton);
+	window.draw(settingsButton);
+	window.draw(exitButton);
 }

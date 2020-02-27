@@ -39,6 +39,48 @@ void handleEvents()
 			{
 				window.close();
 			}
+
+			case sf::Event::KeyPressed:
+			{
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+				{
+					window.close();
+				}
+
+				break;
+			}
+
+			case sf::Event::MouseButtonPressed:
+			{
+				if (gameState == 10)
+				{
+					if (mouseInRectangle(newGameButton, sf::Mouse::getPosition(window)))
+					{
+						std::cout << "1" << std::endl;
+						mmState = 1;
+					}
+
+					if (mouseInRectangle(continueButton, sf::Mouse::getPosition(window)))
+					{
+						std::cout << "2" << std::endl;
+						mmState = 2;
+					}
+
+					if (mouseInRectangle(settingsButton, sf::Mouse::getPosition(window)))
+					{
+						std::cout << "3" << std::endl;
+						mmState = 3;
+					}
+
+					if (mouseInRectangle(exitButton, sf::Mouse::getPosition(window)))
+					{
+						std::cout << "4" << std::endl;
+						mmState = 4;
+					}
+				}
+
+				break;
+			}
 		}
 	}
 }
