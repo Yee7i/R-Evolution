@@ -5,6 +5,7 @@
 #include <time.h>
 #include <cmath>
 #include <sstream>
+#include <vector>
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>

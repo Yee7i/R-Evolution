@@ -7,10 +7,17 @@ extern std::filesystem::path workingDirectory;
 extern double
 dFrameTime,
 dAspectRatio,
-dResolutionScale;
+dResolutionScale,
+dGameScale;
 
 extern sf::RenderWindow 
 window;
+
+extern sf::Vector2f
+v2fLetterboxSize;
+
+extern sf::Vector2i
+mousePosition;
 
 extern thor::Timer 
 tFrameTime;
@@ -31,27 +38,9 @@ extern sf::View
 defaultView;
 
 extern sf::RectangleShape 
-newGameButton,
-continueButton,
-settingsButton,
-exitButton,
 darkenBackground;
 
-extern sf::RenderTexture
-mmTexBackground,
-mmTexStart,
-mmTexStartBig,
-mmTexContinue,
-mmTexContinueBig,
-mmTexSettings,
-mmTexSettingsBig,
-mmTexExit,
-mmTexExitBig,
-mmTexBubble15,
-mmTexBubble35,
-mmTexBubble60;
-
-extern sf::Sprite
+extern at::AlternatingSprite
 mmSprBackground,
 mmSprStart,
 mmSprContinue,
@@ -59,5 +48,8 @@ mmSprSettings,
 mmSprCredits,
 mmSprExit,
 mmSprBubble15,
+mmSprBubble15dop,
 mmSprBubble35,
-mmSprBubble60;
+mmSprBubble35dop,
+mmSprBubble60,
+mmSprBubble60dop;

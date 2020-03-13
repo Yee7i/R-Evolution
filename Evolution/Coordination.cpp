@@ -21,6 +21,12 @@ void processGame()
 		window.clear(sf::Color::Black);
 
 		calculateFrameTime();
+
+		if (gameState < 15)
+		{
+			calculateMMMousePosition();
+		}
+
 		handleEvents();
 
 	//	drawTest();

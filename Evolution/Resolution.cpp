@@ -8,10 +8,6 @@ int
 iGameResolutionX = 800,
 iGameResolutionY = 450;
 
-int
-iChangedResolutionX = 800,
-iChangedResolutionY = 450;
-
 double
 dAspectRatio = (double)ciScreenResolutionX / (double)ciScreenResolutionY,
 dResolutionScale = (double)ciScreenResolutionY / (double)iGameResolutionY;
@@ -25,7 +21,7 @@ void adjustViews()
 
 void recalculateVideoParameters()
 {
-	dAspectRatio = (double)ciScreenResolutionX / (double)ciScreenResolutionY;
+	dAspectRatio = ((window.getSize().y - 2 * v2fLetterboxSize.y) / iGameResolutionY);
 	dResolutionScale = (double)ciScreenResolutionY / (double)iGameResolutionY;
 
 //	std::cout << dAspectRatio << " " << dResolutionScale << std::endl;
@@ -41,7 +37,7 @@ sf::View setLetterbox(sf::View view, unsigned int resizedResolutionX, unsigned i
 		sizeX = 1.0f,
 		sizeY = 1.0f;
 
-	if (windowAspectRatio > viewAspectRatio) // horizontal
+	if (windowAspectRatio >= viewAspectRatio) // horizontal
 	{
 		sizeX = viewAspectRatio / windowAspectRatio;
 		posX = (1 - sizeX) / 2.0f;
@@ -56,4 +52,25 @@ sf::View setLetterbox(sf::View view, unsigned int resizedResolutionX, unsigned i
 	view.setViewport(sf::FloatRect(posX, posY, sizeX, sizeY));
 
 	return view;
+}
+
+sf::Vector2f getLetterboxSize(sf::View view, unsigned int resizedResolutionX, unsigned int resizedResolutionY)
+{
+	float
+		windowAspectRatio = (float)resizedResolutionX / (float)resizedResolutionY,
+		viewAspectRatio = (float)view.getSize().x / (float)view.getSize().y,
+		sizeX = 1.0f,
+		sizeY = 1.0f;
+
+	if (windowAspectRatio > viewAspectRatio) // horizontal
+	{
+		sizeX = viewAspectRatio / windowAspectRatio;
+	}
+
+	if (windowAspectRatio < viewAspectRatio) // vertical
+	{
+		sizeY = windowAspectRatio / viewAspectRatio;
+	}
+
+	return sf::Vector2f((1 - sizeX) * resizedResolutionX / 2, (1 - sizeY) * resizedResolutionY / 2);
 }

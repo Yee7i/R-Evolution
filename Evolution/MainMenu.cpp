@@ -2,34 +2,21 @@
 
 void initializeMainMenu()
 {
-	newGameButton.setSize(sf::Vector2f(100, 50));
-	continueButton.setSize(sf::Vector2f(100, 50));
-	settingsButton.setSize(sf::Vector2f(100, 50));
-	exitButton.setSize(sf::Vector2f(100, 50));
-
-	newGameButton.setFillColor(sf::Color::Transparent);
-	continueButton.setFillColor(sf::Color::Transparent);
-	settingsButton.setFillColor(sf::Color::Transparent);
-	exitButton.setFillColor(sf::Color::Transparent);
-
-	newGameButton.setPosition(50, 50);
-	continueButton.setPosition(50, 120);
-	settingsButton.setPosition(50, 190);
-	exitButton.setPosition(50, 260);
+	loadMMTextures();
+	loadMMSprites();
+	initializeMMHitboxes();
+	positionMMSprites();
+	addMMAnimations();
 
 	darkenBackground.setSize(sf::Vector2f(800, 450));
 	darkenBackground.setFillColor(sf::Color(0, 0, 0, 120));
 	darkenBackground.setPosition(0, 0);
-
-
 
 	gameState = 10;
 }
 
 void handleMainMenu()
 {
-	drawMainMenu();
-
 	switch (mmState)
 	{
 		case 0:
@@ -69,12 +56,22 @@ void handleMainMenu()
 
 			break;
 		}
+
+		case 5:
+		{
+			gameState = 15;
+
+			break;
+		}
 	}
+
+	updateMMBubbles();
+	animateMMSprites();
+	drawMMSprites();
 }
 
 void handleSettings()
 {
-	drawMainMenu();
 	window.draw(darkenBackground);
 
 	sf::RectangleShape test(sf::Vector2f(100, 100));

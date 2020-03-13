@@ -1,0 +1,7 @@
+Continue X 265 Y 111
+
+Start sheet x 164
+Exit sheet x 114
+Credits sheet x 225
+Settings sheet x 254
+Continue sheet x 270

@@ -1,5 +1,6 @@
 #include "Includes.h"
 
+/*
 void drawTest()
 {
 	sf::RectangleShape test1(sf::Vector2f(200, 200));
@@ -22,13 +23,23 @@ void drawTest()
 
 	window.draw(test2);
 	window.draw(outline);
-
 }
+*/
 
-void drawMainMenu()
+void drawMMSprites()
 {
-	window.draw(newGameButton);
-	window.draw(continueButton);
-	window.draw(settingsButton);
-	window.draw(exitButton);
+	retexMMSprites();
+
+	window.draw(mmSprBackground.sprite);
+	window.draw(mmSprBubble15.sprite);
+	window.draw(mmSprBubble15dop.sprite);
+	window.draw(mmSprBubble35.sprite);
+	window.draw(mmSprBubble35dop.sprite);
+	window.draw(mmSprBubble60.sprite);
+	window.draw(mmSprBubble60dop.sprite);
+	window.draw(mmSprStart.sprite);
+	window.draw(mmSprContinue.sprite);
+	window.draw(mmSprSettings.sprite);
+	window.draw(mmSprCredits.sprite);
+	window.draw(mmSprExit.sprite);
 }

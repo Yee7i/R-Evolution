@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animations.cpp" />
     <ClCompile Include="Coordination.cpp" />
     <ClCompile Include="Drawing.cpp" />
     <ClCompile Include="Events.cpp" />
@@ -29,6 +30,7 @@
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Resolution.cpp" />
     <ClCompile Include="Sprites.cpp" />
+    <ClCompile Include="Textures.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
@@ -40,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="GameStates.txt" />
+    <Text Include="textures\mainMenu\mmDimensions.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="textures\mainMenu\mmBackground.png" />

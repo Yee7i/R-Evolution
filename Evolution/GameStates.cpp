@@ -2,7 +2,7 @@
 
 void handleGameStates()
 {
-//	 std::cout << gameState << std::endl;
+	// std::cout << gameState << std::endl;
 
 	switch (gameState)
 	{
@@ -48,6 +48,14 @@ void handleGameStates()
 		case 14:
 		{
 			// std::cout << gameState << std::endl;
+			// credits pressed
+			handleMainMenu();
+
+			break;
+		}
+
+		case 15:
+		{
 			// exit pressed
 			window.close();
 

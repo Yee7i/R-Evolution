@@ -31,3 +31,29 @@ bool mouseInRectangle(sf::RectangleShape rectangle, sf::Vector2i mouse)
 		return false;
 	}
 }
+
+void initializeMMHitboxes()
+{
+	mmSprStart.hitbox.setSize(sf::Vector2f(164, 49));
+	mmSprContinue.hitbox.setSize(sf::Vector2f(270, 43));
+	mmSprSettings.hitbox.setSize(sf::Vector2f(254, 52));
+	mmSprCredits.hitbox.setSize(sf::Vector2f(225, 49));
+	mmSprExit.hitbox.setSize(sf::Vector2f(114, 42));
+
+	mmSprStart.hitbox.setFillColor(sf::Color::Transparent);
+	mmSprContinue.hitbox.setFillColor(sf::Color::Transparent);
+	mmSprSettings.hitbox.setFillColor(sf::Color::Transparent);
+	mmSprCredits.hitbox.setFillColor(sf::Color::Transparent);
+	mmSprExit.hitbox.setFillColor(sf::Color::Transparent);
+
+	mmSprStart.hitbox.setPosition(318, 105);
+	mmSprContinue.hitbox.setPosition(0, 0);
+	mmSprSettings.hitbox.setPosition(272, 171);
+	mmSprCredits.hitbox.setPosition(286, 235);
+	mmSprExit.hitbox.setPosition(342, 305);
+}
+
+void repositionMMHitboxes()
+{
+
+}

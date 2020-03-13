@@ -39,9 +39,6 @@
     <ClCompile Include="Hitboxes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sprites.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Drawing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -49,6 +46,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Textures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprites.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Animations.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,6 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="GameStates.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="textures\mainMenu\mmDimensions.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
